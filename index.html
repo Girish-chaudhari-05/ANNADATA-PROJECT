@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annadata – Share surplus food, reduce waste</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="brand" href="/">🌾 Annadata</a><nav><a target="_blank" rel="noopener" href="/restaurant.html">Restaurants</a><a target="_blank" rel="noopener" href="/ngo.html">NGOs</a><a target="_blank" rel="noopener" href="/admin.html">Admin</a></nav></header>
+<section class="hero"><h1>No food wasted.<br>No one hungry.</h1>
+<p>Annadata connects restaurants, hotels, cafes and canteens with verified NGOs and volunteers, so surplus food reaches people who need it.</p>
+<div class="actions center"><a target="_blank" rel="noopener" class="btn" href="/restaurant.html">I have surplus food</a><a target="_blank" rel="noopener" class="btn alt" href="/ngo.html">I want to collect food</a></div></section>
+<div class="stats" id="stats"></div>
+<main>
+<h2 class="center">How it works</h2>
+<div class="steps">
+<div class="card"><span class="n">1</span><h3>Post</h3><p>A restaurant lists surplus food with quantity, servings and a pickup deadline.</p></div>
+<div class="card"><span class="n">2</span><h3>Claim</h3><p>Verified NGOs nearby see it, nearest first. First to claim gets it.</p></div>
+<div class="card"><span class="n">3</span><h3>Collect</h3><p>The NGO picks up the food. Contact details are shared only after a claim.</p></div>
+<div class="card"><span class="n">4</span><h3>Distribute</h3><p>The NGO records how many people were served. Everyone sees the status.</p></div>
+</div>
+<h2 class="center">Choose your portal</h2>
+<div class="steps three">
+<a target="_blank" rel="noopener" class="card portal" href="/restaurant.html"><h3>🍽️ Restaurant</h3><p>Hotels, cafes, canteens and caterers. Register and post surplus food.</p><b>Login / Register →</b></a>
+<a target="_blank" rel="noopener" class="card portal" href="/ngo.html"><h3>🤝 NGO / Volunteer</h3><p>Find and claim food near you. Accounts are verified by an admin.</p><b>Login / Register →</b></a>
+<a target="_blank" rel="noopener" class="card portal" href="/admin.html"><h3>🛡️ Admin</h3><p>Verify NGOs and keep the platform trustworthy.</p><b>Admin login →</b></a>
+</div>
+<p class="muted center">Annadata coordinates donations; it does not certify food safety. Donate only fresh, properly stored food.</p>
+</main>
+<script>fetch('/api/stats').then(r=>r.json()).then(s=>{document.getElementById('stats').innerHTML=`<div><b>${s.meals}</b>meals rescued</div><div><b>${s.donations}</b>donations delivered</div><div><b>${s.live}</b>available now</div>`}).catch(()=>{})</script>
+</body></html>

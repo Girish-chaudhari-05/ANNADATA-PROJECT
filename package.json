@@ -1,0 +1,12 @@
+{
+  "name": "annadata",
+  "version": "1.0.0",
+  "description": "Connect restaurants with surplus food to verified NGOs and volunteers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "test": "node --no-warnings test.js"
+  },
+  "engines": { "node": ">=22.13" },
+  "license": "MIT"
+}
